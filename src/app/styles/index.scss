@@ -1,0 +1,11 @@
+@use "normalize" as *;
+@use "global" as *;
+@use "variables" as *;
+@use "media" as *;
+
+.app {
+  padding: 24px;
+  color: var(--primary-color);
+}
+
+
