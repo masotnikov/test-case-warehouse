@@ -1,0 +1,42 @@
+@use "@/app/styles/media" as *;
+
+td {
+  padding-left: 12px;
+
+  @include tablet {
+    padding-left: 8px;
+  }
+}
+
+.userName {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 80px;
+  flex-shrink: 0;
+
+
+  @include tablet {
+    gap: 10px;
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  :last-child {
+    color: #FFFFFF66;
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+
+  @include mobile {
+    width: 28px;
+    height: 28px;
+  }
+}
