@@ -1,7 +1,11 @@
+@use "@/app/styles/media" as *;
+
 body {
   font-family: var(--font-family), sans-serif;
   min-height: 100vh;
   background: var(--bg-color);
+  max-width: $laptop;
+  margin-inline: auto;
 }
 
 h1, h2, h3, h4 {

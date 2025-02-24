@@ -1,33 +1,37 @@
 @use "@/app/styles/media" as *;
 
-td {
-  padding-left: 12px;
-
-  @include tablet {
-    padding-left: 8px;
-  }
+.tableRow {
+  border-bottom: 1px solid #4B5258
 }
 
-.userName {
+.wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
   height: 80px;
   flex-shrink: 0;
 
-
   @include tablet {
     gap: 10px;
   }
 }
 
-.userInfo {
+.info {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+}
 
-  :last-child {
-    color: #FFFFFF66;
+.email {
+  color: #FFFFFF66;
+
+  @include mobile {
+    font-size: 10px;
+  }
+}
+
+.userName {
+  @include mobile {
+    font-size: 12px;
   }
 }
 
@@ -38,5 +42,24 @@ td {
   @include mobile {
     width: 28px;
     height: 28px;
+  }
+}
+
+.number {
+  text-align: center;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+.todoCount {
+  text-align: left;
+  padding-left: 12px;
+
+  @include mobile {
+    padding-left: 0;
+    text-align: center;
+    font-size: 12px;
   }
 }

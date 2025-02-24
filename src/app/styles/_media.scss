@@ -4,18 +4,19 @@ $mobile: 404px;
 
 @mixin laptop {
   @media (max-width: $laptop) {
-    @content
+    @content;
   }
 }
 
 @mixin tablet {
   @media (max-width: $tablet) {
-    @content
+    @content;
   }
 }
 
 @mixin mobile {
   @media (max-width: $mobile) {
-    @content
+    @content;
   }
 }
+

@@ -1,18 +1,19 @@
-@use "media" as *;
 @use "normalize" as *;
 @use "global" as *;
 @use "variables" as *;
+@use "media" as *;
 
 .app {
-  padding: 81px 80px 66px 79px;
   color: var(--primary-text-color);
+  padding: 81px 80px 66px 79px;
 
-
-
-  @include mobile {
-    padding: 56px 40px;
+  @include tablet {
+    padding: 81px 35px 101px 35px;
   }
-
+  @include mobile {
+    padding: 56px 40px 145px 40px;
+  }
 }
+
 
 
