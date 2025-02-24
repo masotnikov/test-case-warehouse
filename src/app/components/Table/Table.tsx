@@ -10,9 +10,9 @@ export const Table: FC = () => {
         <table className={cls.Table}>
           <thead>
             <tr>
-              <th>#</th>
-              <th>USERNAME</th>
-              <th>To-Do Count</th>
+              <th className={cls.firstColumn}>#</th>
+              <th className={cls.secondColumn}>USERNAME</th>
+              <th className={cls.thirdColumn}>TO-DO COUNT</th>
             </tr>
           </thead>
           <TableBody/>

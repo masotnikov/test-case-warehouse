@@ -7,23 +7,22 @@ import { useTodos } from "@/app/hooks/useTodos";
 export const TableBody: FC = () => {
   const { userTasks, isLoading } = useTodos();
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!userTasks.length) return <p>Error loading data</p>;
-
+  if (isLoading) return <div>Loading...</div>;
+  if (!userTasks.length) return <div>Error loading data</div>;
 
   return (
     <tbody>
       {userTasks.map((user, index) => (
-        <tr key={user.id}>
-          <td>{index + 1}</td>
-          <td className={cls.userName}>
+        <tr className={cls.tableRow} key={user.id}>
+          <td className={cls.number}>{index + 1}</td>
+          <td className={cls.wrapper}>
             <UserIcon className={cls.icon}/>
-            <div className={cls.userInfo}>
-              <span>{user.username}</span>
-              <span>{user.email}</span>
+            <div className={cls.info}>
+              <span className={cls.userName}>{user.username}</span>
+              <span className={cls.email}>{user.email}</span>
             </div>
           </td>
-          <td>{user.todoCount}</td>
+          <td className={cls.todoCount}>{user.todoCount}</td>
         </tr>
       ))}
     </tbody>
